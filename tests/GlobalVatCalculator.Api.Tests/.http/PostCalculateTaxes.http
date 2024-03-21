@@ -1,0 +1,24 @@
+# Execute a POST request on the /api/v1/purchase/taxes endpoint
+
+# The default port of the server is 7221 as set on the launchSettings.json
+
+# netAmount:    Price without VAT   (decimal)
+# grossAmount:  Price incl. VAT     (decimal)
+# vatAmount:    Value-Added Tax     (decimal)
+# vatRate:      Percentage of VAT.  (integer)
+
+# VAT Rate possible values:
+# 0 = NotSet (Error)
+# 1 = TenPct
+# 2 = ThirteenPct
+# 3 = TwentyPct
+
+POST https://localhost:7221/api/v1/purchase/taxes
+Content-Type: application/json
+
+{
+  "netAmount": "123,45",
+  "grossAmount": "0",
+  "vatAmount": "0",
+  "vatRate": "2"
+}
